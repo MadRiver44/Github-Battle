@@ -1,4 +1,31 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
+// extract a stateless component out of Popular
+const SelectLanguage = props => {
+  let languages = ['All', 'Javascript', 'Ruby', 'Java', 'CSS', 'Python'];
+
+  return (
+    <ul className="languages">
+      {languages.map(lang => {
+        return (
+          <li
+            style={lang === props.selectedLanguage ? { color: '#d0021b' } : null}
+            onClick={props.onSelect.bind(null, lang)}
+            key={lang}>
+            {' '}
+            {lang}
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
+
+SelectLanguage.propTypes = {
+  selectedLanguage: PropTypes.string.isRequired,
+  onSelect: PropTypes.func.isRequired,
+};
 
 class Popular extends React.Component {
   // add state
@@ -19,21 +46,13 @@ class Popular extends React.Component {
   }
 
   render() {
-    let languages = ['All', 'Javascript', 'Ruby', 'Java', 'CSS', 'Python'];
-
     return (
-      <ul className="languages">
-        {languages.map(function(lang) {
-          return (
-            <li
-              key="lang"
-              onClick={this.updateLanguage.bind(null, lang)}
-              style={lang === this.state.selectedLanguage ? { color: '#d0021b' } : null}>
-              {lang}
-            </li>
-          );
-        }, this)}
-      </ul>
+      <div>
+        <SelectLanguage
+          selectedLanguage={this.state.selectedLanguage}
+          onSelect={this.updateLanguage}
+        />
+      </div>
     );
   }
 }
