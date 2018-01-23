@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import PlayerPreview from './PlayerPreview';
 
+// Controlled componet
 class PlayerInput extends Component {
   constructor(props) {
     super(props);
@@ -52,6 +53,7 @@ PlayerInput.propTypes = {
   onSubmit: PropTypes.func.isRequired,
 };
 
+/* -------    Battle owns state which is passed to PlayerPreview and PlayerInput*/
 class Battle extends Component {
   constructor(props) {
     super(props);
@@ -93,6 +95,8 @@ class Battle extends Component {
     const playerOneImage = this.state.playerOneImage;
     const playerTwoImage = this.state.playerTwoImage;
 
+    /* Player name is initially false, we render a PlayerInput component
+   When we fetch a player, we render a reset button until Battle is clicked*/
     return (
       <div>
         <div className="row">

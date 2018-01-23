@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+// Reusable Component, has default props if not user config'd
 const styles = {
   content: {
     textAlign: 'center',

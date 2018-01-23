@@ -2,6 +2,7 @@
 
 import axios from 'axios';
 
+// in case of rate limiting when hitting the github api
 const id = 'YOUR CLIENT ID';
 const sec = 'YOUR SECRET ID';
 const params = '?clent_id=' + id + '&client_secret=' + sec;
@@ -34,7 +35,8 @@ const handleError = error => {
   return null;
 };
 
-// composition of functions
+// composition of functions, pass in array of functions, when results come back
+// we process data, each will return an object(net is an array of objects)
 const getUserData = player => {
   return axios.all([getProfile(player), getRepos(player)]).then(data => {
     const profile = data[0];

@@ -26,6 +26,7 @@ let config = {
   ],
 };
 
+// conditional for production deployment environment
 if (process.env.NODE_ENV === 'production') {
   config.plugins.push(
     new webpack.DefinePlugin({
