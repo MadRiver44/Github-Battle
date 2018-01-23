@@ -5,6 +5,7 @@ const styles = {
   content: {
     textAlign: 'center',
     fontSize: '35px',
+    color: 'red',
   },
 };
 
