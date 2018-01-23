@@ -53,7 +53,7 @@ PlayerInput.propTypes = {
   onSubmit: PropTypes.func.isRequired,
 };
 
-/* -------    Battle owns state which is passed to PlayerPreview and PlayerInput*/
+/* -------    Battle owns state which is passed to PlayerPreview and PlayerInput ----- */
 class Battle extends Component {
   constructor(props) {
     super(props);
