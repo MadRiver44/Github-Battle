@@ -36,7 +36,7 @@ const handleError = error => {
 };
 
 // composition of functions, pass in array of functions, when results come back
-// we process data, each will return an object(net is an array of objects)
+// we process data, each will return an object(net result is an array of objects)
 const getUserData = player => {
   return axios.all([getProfile(player), getRepos(player)]).then(data => {
     const profile = data[0];
