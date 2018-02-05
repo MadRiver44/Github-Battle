@@ -1,1 +1,1 @@
-![App screenshot](https://user-images.githubusercontent.com/7386478/35817420-52aa14da-0a6b-11e8-8bec-02eac5dee298.png)
+![App screenshot](https://user-images.githubusercontent.com/7386478/35818233-7c39f11a-0a6d-11e8-9fe6-5ab0837638dc.png)
