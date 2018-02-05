@@ -30,12 +30,13 @@ This was an excercise in learning additional aspects of React and the tooling in
 
  Webpack.js has a basic conditional configuration that depends on if the node environment detected was in production or development. The build was optimized with the UglifyJsPlugin.
 
- App.js is the entry point for the app and here, a Routes are defined and a Switch component is used as a fallback for a 404.
+ App.js is the entry point for the app and here, Routes are defined and a Switch component is used as a fallback for a 404.
 
  Battle.js contains a controlled component to handle player input. Battle holds state and passes props down to another component, PlayerPreview.js.
 
  The rest of the components provide additional functionality such as the Results component, and we data is generally mapped over and rendered in a flexible grid. this can be seen in the Popular component as well.
 
+I'd like to thank Tyler Mcginnis for the react router 4 tutorials and fundamentals courses for helping me soidify React concepts.
 
 
 
